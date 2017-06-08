@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+
+class Missions {
+    
+    var uniqueName = ""
+    var from = ""  //logged in user
+    var imageURL = ""
+    var detail = ""
+    var key = ""
+}

@@ -7,29 +7,56 @@
 //
 
 import UIKit
+import Firebase
+
 
 class SignInVC: UIViewController {
-
+    
+    
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var errorMessage: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func signInUpTapped(_ sender: Any) {
+        
+        Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
+            if error != nil {
+                
+               Auth.auth().createUser(withEmail: self.email.text!, password: self.password.text!, completion: { (user, error) in
+               
+                if error != nil {
+                    self.errorMessage.text = error?.localizedDescription
+                }else
+                    {
+                    self.errorMessage.text = "creating user was a success"
+                    
+                
+                    Database.database().reference().child("agents").child(user!.uid).child("email").setValue(user?.email)
+                    
+                    self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
+                    
+                    
+                }
+                
+                
+               })
+            }else{
+                self.errorMessage.text = "Sign in success"
+                self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
+            }
+        }
+        
+        
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }

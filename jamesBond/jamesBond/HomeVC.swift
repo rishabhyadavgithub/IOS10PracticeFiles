@@ -7,29 +7,111 @@
 //
 
 import UIKit
+import Firebase
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController ,UITableViewDataSource,UITableViewDelegate{
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var missions : [Missions] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        //get data from firebase
+        Database.database().reference().child("agents").child(Auth.auth().currentUser!.uid).child("missions").observe(.childAdded) { (snapshot : DataSnapshot) in
+            
+            let mission = Missions()
+            
+            
+            //store data in missions array
+            
+            if let dictionary = snapshot.value as? NSDictionary{
+                
+                if let imgURL = dictionary["imageURL"] as? String{
+                    mission.imageURL = imgURL
+                }
+                if let frm = dictionary["from"] as? String{
+                    mission.from = frm
+                }
+                if let detl = dictionary["detail"] as? String{
+                    mission.detail = detl
+                }
+                if let uniName = dictionary["uniquename"] as? String{
+                    mission.uniqueName = uniName
+                }
+                mission.key = snapshot.key
+            
+            }
+            
+            self.missions.append(mission)
+            self.tableView.reloadData()
+            
+            
+        }
+        
+        
+        
+        Database.database().reference().child("agents").child(Auth.auth().currentUser!.uid).child("missions").observe(.childRemoved, with: { (snapshot) in
+            
+            var arrayKey = 0
+            for mission in self.missions{
+                if mission.key == snapshot.key{
+                    self.missions.remove(at: arrayKey)
+                }
+                arrayKey += 1
+            }
+            
+            self.tableView.reloadData()
+            
+        })
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return missions.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell()
+        
+        let mission = missions[indexPath.row]
+        
+        cell.textLabel?.text = mission.uniqueName
+        
+        
+        return cell
     }
-    */
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mission = missions[indexPath.row]
+        
+        performSegue(withIdentifier: "viewMissionSegue", sender: mission)
+            }
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "viewMissionSegue" {
+            
+            let guest = segue.destination as! missionDetailVC
+            guest.missions = sender as! Missions
+        }
+    }
+    
+        
+        
+        
+        
+        
+    }
+    
+   
 
-}
+  
+

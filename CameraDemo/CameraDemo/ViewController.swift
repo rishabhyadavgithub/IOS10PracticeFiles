@@ -14,6 +14,7 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate,UINaviga
     
     @IBOutlet var imageView: UIImageView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

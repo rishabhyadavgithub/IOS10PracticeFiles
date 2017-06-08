@@ -15,7 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var payPrice: UILabel!
 
     @IBOutlet weak var errorLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         
         inputText.layer.cornerRadius = 15.0

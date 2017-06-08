@@ -38,7 +38,7 @@ class UserNameVC: UIViewController {
         
         takeMission.isEnabled = false
         
-        let userName = self.dataBaseReference.child("username").child(self.userName.text!).observe(.value){(snapShot: DataSnapshot) in
+         self.dataBaseReference.child("username").child(self.userName.text!).observe(.value){(snapShot: DataSnapshot) in
         
             if (!snapShot.exists()){
                 

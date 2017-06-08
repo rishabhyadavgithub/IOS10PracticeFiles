@@ -7,29 +7,100 @@
 //
 
 import UIKit
+import Firebase
 
-class selectAgentsVC: UIViewController {
+class selectAgentsVC: UIViewController , UITableViewDelegate,UITableViewDataSource{
+    
+    
+    
+    var uniquename = ""
+    var detail = ""
+    var imageURL = ""
+    
+    var agents : [Agent] = []
+    
+   
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       // print("image URL is : \(imageURL)")
+        
+      tableView.dataSource = self
+         tableView.delegate = self
+        
+        
+        Database.database().reference().child("agents").observe(.childAdded) { (snapshot: DataSnapshot) in
+            let agent = Agent()
+            
+            if let dictionary = snapshot.value as? NSDictionary{
+                if let agentEmail = dictionary["email"] as? String{
+                    agent.email = agentEmail
+                }
+            }
+            
+            agent.uid = snapshot.key
+            self.agents.append(agent)
+            self.tableView.reloadData()
+            
+            
+            
+        }
+        
+        
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return agents.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        
+        let cell = UITableViewCell()
+        
+        let agent = agents[indexPath.row]
+        cell.textLabel?.text = agent.email
+        
+        
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let missionDict = ["uniquename" : uniquename,
+                           "imageURL" : imageURL,
+                           "details" : detail,
+                           "from" : Auth.auth().currentUser?.email]
+        
+        let agent = agents[indexPath.row]
+        
+        Database.database().reference().child("agents").child(agent.uid).child("missions").childByAutoId().setValue(missionDict)
+        
+        navigationController?.popToRootViewController(animated: true)
+    }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
 }

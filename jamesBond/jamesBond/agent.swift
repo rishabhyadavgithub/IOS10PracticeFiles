@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class Agent{
+    
+    var email = ""
+    var uid = ""
+    // var agentCode = ""
+    
+    
+}
+

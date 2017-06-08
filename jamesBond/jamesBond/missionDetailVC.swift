@@ -7,29 +7,55 @@
 //
 
 import UIKit
+import Firebase
+import SDWebImage
 
 class missionDetailVC: UIViewController {
-
+    
+    
+    var missions = Missions()
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var missionDetails: UILabel!
+    @IBOutlet weak var from: UILabel!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      //  print("###\(missions.from)")
+        
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+        missionDetails.text = missions.detail
+        
+        from.text = missions.from
+        
+        imageView.sd_setImage(with: URL(string: missions.imageURL))
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
     }
-    */
 
+    @IBAction func denyMissionTapped(_ sender: Any) {
+        
+        //delete mission from database
+        
+        Database.database().reference().child("agents").child(Auth.auth().currentUser!.uid).child("missions").child(missions.key).removeValue()
+        
+        
+        
+        
+        //delete images from storage
+        Storage.storage().reference().child("missionImages").child("\(missions.uniqueName).jpg").delete { (error) in
+            
+            print("\(error?.localizedDescription)")
+        }
+        
+        //pop the user to root vc
+        navigationController?.popToRootViewController(animated: true)
+        
+        //reload the table view when child gets deleted (homeVC)
+        
+    }
+  
 }

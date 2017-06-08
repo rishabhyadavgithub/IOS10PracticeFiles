@@ -8,20 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		18BC836B1EDECABB00311777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC836A1EDECABB00311777 /* AppDelegate.swift */; };
-		18BC836D1EDECABB00311777 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC836C1EDECABB00311777 /* ViewController.swift */; };
 		18BC83701EDECABB00311777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BC836E1EDECABB00311777 /* Main.storyboard */; };
 		18BC83721EDECABB00311777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BC83711EDECABB00311777 /* Assets.xcassets */; };
 		18BC83751EDECABB00311777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BC83731EDECABB00311777 /* LaunchScreen.storyboard */; };
+		18BC837D1EDECAF600311777 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BC837C1EDECAF600311777 /* GoogleService-Info.plist */; };
+		18BC83811EDED1BD00311777 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC83801EDED1BD00311777 /* SignInVC.swift */; };
+		18BC83851EDED39600311777 /* agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC83841EDED39600311777 /* agent.swift */; };
+		18BC83871EDED3A400311777 /* mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC83861EDED3A400311777 /* mission.swift */; };
+		18BC83891EDFE2D100311777 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC83881EDFE2D100311777 /* HomeVC.swift */; };
+		18BC838B1EDFE37900311777 /* SendMissionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC838A1EDFE37900311777 /* SendMissionVC.swift */; };
+		18BC838D1EDFF2D200311777 /* selectAgentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC838C1EDFF2D200311777 /* selectAgentsVC.swift */; };
+		18BC838F1EE00BF300311777 /* missionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC838E1EE00BF300311777 /* missionDetailVC.swift */; };
+		7A037042C575B3143585A288 /* Pods_jamesBond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C74D18F8C363DBC4205651C /* Pods_jamesBond.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02B9DCF8839B6BD53731621B /* Pods-jamesBond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jamesBond.release.xcconfig"; path = "Pods/Target Support Files/Pods-jamesBond/Pods-jamesBond.release.xcconfig"; sourceTree = "<group>"; };
 		18BC83671EDECABB00311777 /* jamesBond.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jamesBond.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BC836A1EDECABB00311777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18BC836C1EDECABB00311777 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18BC836F1EDECABB00311777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18BC83711EDECABB00311777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18BC83741EDECABB00311777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18BC83761EDECABB00311777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BC837C1EDECAF600311777 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18BC83801EDED1BD00311777 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		18BC83841EDED39600311777 /* agent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = agent.swift; sourceTree = "<group>"; };
+		18BC83861EDED3A400311777 /* mission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mission.swift; sourceTree = "<group>"; };
+		18BC83881EDFE2D100311777 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		18BC838A1EDFE37900311777 /* SendMissionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMissionVC.swift; sourceTree = "<group>"; };
+		18BC838C1EDFF2D200311777 /* selectAgentsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectAgentsVC.swift; sourceTree = "<group>"; };
+		18BC838E1EE00BF300311777 /* missionDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = missionDetailVC.swift; sourceTree = "<group>"; };
+		3C74D18F8C363DBC4205651C /* Pods_jamesBond.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jamesBond.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF67F9856150BE5F83C99230 /* Pods-jamesBond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jamesBond.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jamesBond/Pods-jamesBond.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A037042C575B3143585A288 /* Pods_jamesBond.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +59,8 @@
 			children = (
 				18BC83691EDECABB00311777 /* jamesBond */,
 				18BC83681EDECABB00311777 /* Products */,
+				FD215EA5A398FF1F02A4DB93 /* Pods */,
+				3023052D9105636B608FEC3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +75,54 @@
 		18BC83691EDECABB00311777 /* jamesBond */ = {
 			isa = PBXGroup;
 			children = (
+				18BC83831EDED2B400311777 /* models */,
+				18BC83821EDED1D900311777 /* controllers */,
 				18BC836A1EDECABB00311777 /* AppDelegate.swift */,
-				18BC836C1EDECABB00311777 /* ViewController.swift */,
 				18BC836E1EDECABB00311777 /* Main.storyboard */,
 				18BC83711EDECABB00311777 /* Assets.xcassets */,
 				18BC83731EDECABB00311777 /* LaunchScreen.storyboard */,
 				18BC83761EDECABB00311777 /* Info.plist */,
+				18BC837C1EDECAF600311777 /* GoogleService-Info.plist */,
 			);
 			path = jamesBond;
+			sourceTree = "<group>";
+		};
+		18BC83821EDED1D900311777 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18BC83801EDED1BD00311777 /* SignInVC.swift */,
+				18BC83881EDFE2D100311777 /* HomeVC.swift */,
+				18BC838A1EDFE37900311777 /* SendMissionVC.swift */,
+				18BC838C1EDFF2D200311777 /* selectAgentsVC.swift */,
+				18BC838E1EE00BF300311777 /* missionDetailVC.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		18BC83831EDED2B400311777 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				18BC83841EDED39600311777 /* agent.swift */,
+				18BC83861EDED3A400311777 /* mission.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		3023052D9105636B608FEC3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C74D18F8C363DBC4205651C /* Pods_jamesBond.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD215EA5A398FF1F02A4DB93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF67F9856150BE5F83C99230 /* Pods-jamesBond.debug.xcconfig */,
+				02B9DCF8839B6BD53731621B /* Pods-jamesBond.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +132,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18BC83791EDECABB00311777 /* Build configuration list for PBXNativeTarget "jamesBond" */;
 			buildPhases = (
+				1858D2F4695F4F6D22102AE2 /* [CP] Check Pods Manifest.lock */,
 				18BC83631EDECABB00311777 /* Sources */,
 				18BC83641EDECABB00311777 /* Frameworks */,
 				18BC83651EDECABB00311777 /* Resources */,
+				7E864BD7150677AE7ECFD9A8 /* [CP] Embed Pods Frameworks */,
+				E89C276AA6A7653D1BB73094 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BC83751EDECABB00311777 /* LaunchScreen.storyboard in Resources */,
+				18BC837D1EDECAF600311777 /* GoogleService-Info.plist in Resources */,
 				18BC83721EDECABB00311777 /* Assets.xcassets in Resources */,
 				18BC83701EDECABB00311777 /* Main.storyboard in Resources */,
 			);
@@ -132,13 +197,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1858D2F4695F4F6D22102AE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E864BD7150677AE7ECFD9A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jamesBond/Pods-jamesBond-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E89C276AA6A7653D1BB73094 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jamesBond/Pods-jamesBond-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18BC83631EDECABB00311777 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18BC836D1EDECABB00311777 /* ViewController.swift in Sources */,
+				18BC83851EDED39600311777 /* agent.swift in Sources */,
+				18BC838D1EDFF2D200311777 /* selectAgentsVC.swift in Sources */,
+				18BC83891EDFE2D100311777 /* HomeVC.swift in Sources */,
+				18BC83811EDED1BD00311777 /* SignInVC.swift in Sources */,
+				18BC83871EDED3A400311777 /* mission.swift in Sources */,
 				18BC836B1EDECABB00311777 /* AppDelegate.swift in Sources */,
+				18BC838F1EE00BF300311777 /* missionDetailVC.swift in Sources */,
+				18BC838B1EDFE37900311777 /* SendMissionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +378,7 @@
 		};
 		18BC837A1EDECABB00311777 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF67F9856150BE5F83C99230 /* Pods-jamesBond.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3KD9VPAV7X;
@@ -272,6 +392,7 @@
 		};
 		18BC837B1EDECABB00311777 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02B9DCF8839B6BD53731621B /* Pods-jamesBond.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3KD9VPAV7X;
@@ -302,6 +423,7 @@
 				18BC837B1EDECABB00311777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
