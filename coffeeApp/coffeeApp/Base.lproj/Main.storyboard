@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="coffeeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Pl4-QV-6oe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CoffeeApp" translatesAutoresizingMaskIntoConstraints="NO" id="cMu-gm-6bg">
+                                <rect key="frame" x="67" y="28" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Owi-QI-bI0"/>
+                                    <constraint firstAttribute="height" constant="128" id="aZg-gC-0zj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the number of cups of coffee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfw-UN-mRb">
+                                <rect key="frame" x="38" y="143" width="298" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Example 10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j9Y-od-DXH">
+                                <rect key="frame" x="77" y="193" width="220" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final amount to pay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja2-T1-mJk">
+                                <rect key="frame" x="90" y="255" width="195" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpE-jj-3n3">
+                                <rect key="frame" x="130" y="297" width="115" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="n8J-FX-oXm"/>
+                                    <constraint firstAttribute="width" constant="115" id="oTD-um-Jj2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbu-2r-Rfl">
+                                <rect key="frame" x="91" y="342" width="192" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="0yq-tX-dUC"/>
+                                    <constraint firstAttribute="height" constant="53" id="COU-tr-t3S"/>
+                                </constraints>
+                                <state key="normal" image="calculate"/>
+                                <connections>
+                                    <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aPT-RN-Pzl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter value in Box!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGj-4f-doL">
+                                <rect key="frame" x="113" y="231" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bfw-UN-mRb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="123" id="1Dl-34-yrp"/>
+                            <constraint firstItem="kbu-2r-Rfl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bsj-j6-uUV"/>
+                            <constraint firstItem="cMu-gm-6bg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="F36-fA-RLL"/>
+                            <constraint firstItem="Pl4-QV-6oe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hit-b9-spx"/>
+                            <constraint firstItem="Bfw-UN-mRb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="Iu7-mL-LBb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cMu-gm-6bg" secondAttribute="trailing" constant="52" id="LLD-xJ-WLy"/>
+                            <constraint firstItem="Pl4-QV-6oe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MeU-fN-iu3"/>
+                            <constraint firstItem="fGj-4f-doL" firstAttribute="top" secondItem="j9Y-od-DXH" secondAttribute="bottom" constant="8" symbolic="YES" id="Tff-0A-MUS"/>
+                            <constraint firstItem="j9Y-od-DXH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="61" id="UOm-Ou-IqC"/>
+                            <constraint firstItem="fGj-4f-doL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="97" id="XSc-gg-RbH"/>
+                            <constraint firstItem="cMu-gm-6bg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="ZAr-Hz-Al1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Pl4-QV-6oe" secondAttribute="bottom" id="hXW-S2-AYD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bfw-UN-mRb" secondAttribute="trailing" constant="23" id="hjx-Zt-g9J"/>
+                            <constraint firstItem="kbu-2r-Rfl" firstAttribute="top" secondItem="cpE-jj-3n3" secondAttribute="bottom" constant="24" id="kib-wd-zHZ"/>
+                            <constraint firstItem="fGj-4f-doL" firstAttribute="centerX" secondItem="Ja2-T1-mJk" secondAttribute="centerX" id="oRL-35-scg"/>
+                            <constraint firstItem="Ja2-T1-mJk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qXn-vZ-xrc"/>
+                            <constraint firstItem="j9Y-od-DXH" firstAttribute="centerX" secondItem="Bfw-UN-mRb" secondAttribute="centerX" id="rQn-UW-TN9"/>
+                            <constraint firstItem="j9Y-od-DXH" firstAttribute="top" secondItem="Bfw-UN-mRb" secondAttribute="bottom" constant="24" id="suJ-bI-1k1"/>
+                            <constraint firstItem="Ja2-T1-mJk" firstAttribute="top" secondItem="j9Y-od-DXH" secondAttribute="bottom" constant="32" id="vPa-7Z-BDq"/>
+                            <constraint firstItem="cpE-jj-3n3" firstAttribute="top" secondItem="Ja2-T1-mJk" secondAttribute="bottom" constant="18" id="weW-t6-li8"/>
+                            <constraint firstAttribute="trailing" secondItem="Pl4-QV-6oe" secondAttribute="trailing" id="xUt-wl-slo"/>
+                            <constraint firstItem="cpE-jj-3n3" firstAttribute="centerX" secondItem="Ja2-T1-mJk" secondAttribute="centerX" id="xiB-pI-i22"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="fGj-4f-doL" id="Omv-sB-Yqh"/>
+                        <outlet property="inputText" destination="j9Y-od-DXH" id="tva-rq-pKm"/>
+                        <outlet property="payPrice" destination="cpE-jj-3n3" id="yyg-ZG-7dK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CoffeeApp" width="313" height="56"/>
+        <image name="bg" width="375" height="667"/>
+        <image name="calculate" width="182" height="53"/>
+    </resources>
+</document>

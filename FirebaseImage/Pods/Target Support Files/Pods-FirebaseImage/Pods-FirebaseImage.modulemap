@@ -1,0 +1,6 @@
+framework module Pods_FirebaseImage {
+  umbrella header "Pods-FirebaseImage-umbrella.h"
+
+  export *
+  module * { export * }
+}
