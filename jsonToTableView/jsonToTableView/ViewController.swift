@@ -53,7 +53,6 @@ class ViewController: UIViewController , UITableViewDataSource{
         
         fetchedCountry = []
         
-       
         let url = "https://restcountries.eu/rest/v2/all"
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = "GET"
@@ -68,7 +67,7 @@ class ViewController: UIViewController , UITableViewDataSource{
             }else{
                 
                  do {
-                    let fetchedData = try JSONSerialization.jsonObject(with: data!, options: .mutableLeaves)as! NSArray
+                    let fetchedData = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)as! NSArray
                    // print(fetchedData)
                     
                     for eachFetchedCountry in fetchedData{

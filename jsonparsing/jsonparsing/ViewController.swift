@@ -21,21 +21,23 @@ class ViewController: UIViewController {
                 print("error")
             }else{
                 
-                if let myData = data {
+                if let content = data {
                     do{
                         
-                        let myJson = try JSONSerialization.jsonObject(with: myData, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary   //Anyobeject can be used as
                         
                         //print(myJson)
                         
-                        if let face = myJson["face"] as AnyObject?{
+                        if let face = myJson["face"] as! NSDictionary?
+                        {
                             
-                            if let mouth = face["mouth"]as! NSArray?{
-                                //print(mouth)
+                            if let nose = face["nose"] as! NSArray?
+                            {
+                                print(nose)
                                 
-                                for i in 0..<3{
-                                    print(mouth[i])
-                                }
+//                                for i in 0..<3{
+//                                    print(mouth[i])
+//                                }
                             }
                         }
                         

@@ -44,8 +44,8 @@ class ViewController: UIViewController {
             //fetching gender from results
             if let dict = result.value as? Dictionary<String,AnyObject>{
                 if let innerDictR = dict["results"]![0] as? Dictionary<String,AnyObject>{
-                    if let webGender = innerDictR["gender"] as? String{
-                        self.gender = webGender
+                    if let gender = innerDictR["gender"] as? String{
+                        self.gender = gender
                         print("###\(self.gender)")
                     }
                 }
@@ -54,8 +54,8 @@ class ViewController: UIViewController {
             //fetching phone from results
             if let dict = result.value as? Dictionary<String,AnyObject>{
                 if let innerDictR = dict["results"]![0] as? Dictionary<String,AnyObject>{
-                    if let webPhone = innerDictR["phone"] as? String{
-                        self.phone = webPhone
+                    if let phone = innerDictR["phone"] as? String{
+                        self.phone = phone
                         print("###\(self.phone)")
                     }
                 }
@@ -65,9 +65,9 @@ class ViewController: UIViewController {
             //fetching first from name
             if let dict = result.value as? Dictionary<String,AnyObject>{
                 if let innerDictR = dict["results"]![0] as? Dictionary<String,AnyObject>{
-                    if let nameD = innerDictR["name"] as? Dictionary<String,AnyObject>{
-                        if let webFirst = nameD["first"] as? String {
-                            self.firstName = webFirst.capitalized
+                    if let name = innerDictR["name"] as? Dictionary<String,AnyObject>{
+                        if let first = name["first"] as? String {
+                            self.firstName = first.capitalized
                             print(self.firstName)
                         }
                         
@@ -78,8 +78,8 @@ class ViewController: UIViewController {
             //fetching value from id
             if let dict = result.value as? Dictionary<String,AnyObject>{
                 if let innerDictR = dict["results"]![0] as? Dictionary<String,AnyObject>{
-                    if let iD = innerDictR["id"] as? Dictionary<String,AnyObject>{
-                        if let webValue = iD["first"] as? String {
+                    if let id = innerDictR["id"] as? Dictionary<String,AnyObject>{
+                        if let webValue = id["first"] as? String {
                             self.idValue = webValue.capitalized
                             print(self.idValue)
                             }
@@ -91,9 +91,9 @@ class ViewController: UIViewController {
             //fetching city from location
             if let dict = result.value as? Dictionary<String,AnyObject>{
                 if let innerDictR = dict["results"]![0] as? Dictionary<String,AnyObject>{
-                    if let locationD = innerDictR["location"] as? Dictionary<String,AnyObject>{
-                        if let webCity = locationD["city"] as? String {
-                            self.city = webCity.capitalized
+                    if let location = innerDictR["location"] as? Dictionary<String,AnyObject>{
+                        if let city = location["city"] as? String {
+                            self.city = city.capitalized
                             print(self.city)
                         }
                         
